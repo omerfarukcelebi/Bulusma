@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+RO:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playwrite+RO:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background: #FFF8F8; /* Açık pembe-beyaz */
+  background-image: radial-gradient(#FFE6E6 1px, transparent 1px);
+  background-size: 20px 20px;
+  scroll-behavior: smooth;
+}
+
+.container{
+    width: 50%;
+    height: 100vh;
+    margin-left: 25%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 228, 232);
+    height: 4rem;
+    text-align: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100000000;
+}
+
+header .logo{
+    margin-left: 2rem;
+    font-family: "Playwrite RO", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+header .right {
+    margin-right: 2rem;
+    display: flex;
+}
+
+header .right a{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #FFB6C1;
+    height: 2.2rem;
+    width: 5.8rem;
+    margin: 0.5rem;
+    padding-top: 0.1rem;
+    border-radius: 25px;
+    font-family: "Playwrite RO", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+header .right a:hover{
+    color: #FFFFFF;
+    background-color: #FFA8B8; 
+}
+
+.slider-container {
+    width: 100%; /* veya istersen .container kadar */
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  .slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    transition: none;
+  }
+
+  .card {
+    min-width: 50vw; /* Sayfanın %50'si kadar */
+    height: 400px;
+    background: #FFEEF2;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    user-select: none;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card .left img {
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    pointer-events: none;
+  }
+
+  .card .cizgi{
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 182, 193, 0.3); /* Yarı şeffaf pembe */
+    box-shadow: 
+      0 0 8px rgba(255, 182, 193, 0.6), /* Merkezde ışık */
+      -2px 0 6px rgba(255, 182, 193, 0.3), /* Sol yayılım */
+      2px 0 6px rgba(255, 182, 193, 0.3); /* Sağ yayılım */
+  }
+  /* Scrollbar'ı gizle */
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .profile-card {
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+}
+
+.name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #800020;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-weight: 500;
+    color: #E75480;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFE6E6;
+    padding-bottom: 20px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #800020;
+    margin: 20px 0 10px 0;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.interests {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.interest-tag {
+    background-color: #FFE6E6;
+    color: #E75480;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card1buton {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 25px;
+    background: linear-gradient(to right, #FF6B8B, #FF8E9E); /* Pembe gradient */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 139, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .card1buton:hover {
+    background: linear-gradient(to right, #FF8E9E, #FF6B8B);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 139, 0.4);
+  }
+
+
+  .detay-kutu {
+    padding: 20px;
+    background-color: #fff0f5;
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    display: none;
+    transition: opacity 0.4s ease;
+    z-index: 1000;
+    margin-top: 1rem;
+  }
+
+  .detay-kutu.show {
+    display: block;
+    opacity: 1;
+    
+  }
+
+  .card1buton {
+    margin: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .detay-kutu .detayfoto img{
+    width: 150px;
+    height: 150px;
+  }
+
+
+  .chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #ff7eb9	;
+    border: 1px solid #ccc;
+    width: 185px;
+    margin-top: 0.5rem;
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(255, 126, 185, 0.6);
+    cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .chip:hover{
+    color: #fff5f5	;
+    background-color: #ff4d94;
+  transform: scale(1.05);
+  }
+
+  .chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .baslik{
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    color: #ff69b4;
+  }
+
+  .detay-kutu h4{
+    color: #333333;
+  }
+
+  .detay-kutu h2{
+    color: #e91e63;
+  }
+
+  footer{
+    background-color: rgb(255, 228, 232);
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+    color: white;
+    padding: 25px 0;
+    font-family: 'Playfair Display', serif;
+    margin-top: 10rem;
+}
+
+
+.footerContainer{
+    width: 100%;
+    padding: 10px 30px 20px ;
+    
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+    color: #333333;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 10px 0;
+    
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    
+}
+.footerNav ul li a{
+    color:white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+    color: #333333;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    padding: 10px;
+    text-align: center;
+}
+.footerBottom p{
+    color: #333333;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+
+
+
+
+/* Detay butonları container */
+.detail-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Detay kutuları için temel stil */
+.detay-kutu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff0f5;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.detay-kutu.show {
+  display: block;
+  opacity: 1;
+}
+
+.card1buton.active {
+  background: linear-gradient(to right, #E75480, #FF6B8B) !important;
+  box-shadow: 0 6px 20px rgba(231, 84, 128, 0.5) !important;
+}
+
+.kayit-container{
+  background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+  width: 100%;
+  height: 50%;
+  max-width: 100%; 
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.5);
+  margin-top: 1rem;
+  border-radius: 25px;
+}
+
+.kayit-container .ust{
+  align-items: center;
+  text-align: center;
+  font-size: 2.4rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.kayit-container .ust p{
+  padding-top: 5rem;
+}
+
+.kayit-container .orta{
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; 
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.7rem;
+}
+
+.kayit-container .orta input{
+  border-radius: 25px ;
+  border: none;
+  width: 35%;
+  height: 2.9rem;
+  padding-left: 0.9rem;
+  background-color: #fffafa; 
+  border: 2px solid #ffccd5;
+  color: #333333; 
+  box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+}:focus{
+  outline: none;
+  border-color: #ff85a2;
+  box-shadow: 0 0 8px #ffb6c1;
+}
+
+.kayit-container .orta input:hover{
+  border: 1px solid #333333;
+}
+
+.kayit-container .assagı{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.kayit-container .assagı a{
+  color:#d6336c;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.kayit-container .assagı a:hover{
+  text-decoration:underline;
+}
+
+.kayit-container .assagı input{
+  background-color: #ff4d6d; 
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2.2rem;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(255, 77, 109, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.kayit-container .assagı input:hover{
+    background-color: #ff1c4d;
+    transform: scale(1.05);
+}
+
+.galeri-container {
+  width: 100%;
+  /* container sabit, scroll yok */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.galeri-container .ilk,
+.galeri-container .ikinci,
+.galeri-container .ucuncu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.galeri-container .isimler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.galeri-container .resimler {
+  display: flex;
+  flex-wrap: nowrap; /* Bu özellikle kaydırma elemanları bir satırda kalır */
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  background-color: #f8d7da; /* Hafif pembe */
+  border-radius: 10px;
+  overflow-x: scroll;
+  scroll-behavior: smooth; /* Kaydırma sırasında yumuşak geçiş */
+}
+
+.galeri-container .foto {
+  flex: 0 0 auto; /* Elemanlar sabit boyutlu olur */
+  width: 300px;
+  height: 200px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+/* Webkit scrollbar özelleştirmelerini kontrol et */
+.galeri-container .resimler::-webkit-scrollbar {
+  height: 8px; /* Yatay scrollbar için yükseklik */
+}
+
+.galeri-container .resimler::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar kaydırıcı kısmı */
+  border-radius: 10px;
+}
+
+.galeri-container .resimler::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Scrollbar arka planı */
+}
+
+/* Scrollbar'ı görünür hale getirme */
+.galeri-container .resimler::-webkit-scrollbar-button {
+  display: block;
+}
+
+.galeri-container .isimler{
+  background: linear-gradient(to right, #ffe4e9, #ffc0cb);
+  width: 400px;
+  height: 2.6rem;
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+}
+
+.galeri-container .isimler p{
+  font-size: 1rem;
+  color: #800020;
+}
+
+.galeri-container .isimler .btn1 a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.galeri-container .isimler a:hover{
+  text-decoration: underline;
+}
+
+.galeri-container .isimler .btn1 {
+  width: 100px;
+  height: 1.5rem;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  padding-top: 3px;
+  background: linear-gradient(to right, #E75480, #FF6B8B) !important;
+  box-shadow: 0 6px 20px rgba(231, 84, 128, 0.5) !important;
+}
+
+.bulusma-container {
+  max-width: 100%;
+  margin: 50px auto;
+  background: linear-gradient(to bottom,  #ffe6eb, /* çok açık pembe */ #ffd6e0, #ffccd9,  #ffb6c1,  #ff9eb2);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3); /* Pembe tonlu gölge */
+  color: #fff;
+}
+
+.ust h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #111; /* Hafif pembe gölge */
+  font-family: 'Pacifico', cursive; /* Romantik bir font tavsiyesi */
+}
+
+.orta-bulusma {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.orta-bulusma div {
+  display: flex;
+  gap: 12px;
+}
+
+.orta-bulusma input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ff69b4; /* Pembe sınır */
+  border-radius: 10px;
+  background-color: #f8bbd0;
+  color: black;
+  font-size: 15px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.orta-bulusma input:focus {
+  border-color: #ff1493;
+  box-shadow: 0 0 8px #ff69b4;
+  outline: none;
+}
+
+.orta-bulusma input::placeholder {
+  color: black;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.alt {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.bulusma {
+  padding: 14px 32px;
+  background-color: #ff5ca2; /* Daha şeker pembe */
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.bulusma:hover {
+  background-color: #ff1493; /* Daha canlı hover */
+  transform: scale(1.05); /* Hafif büyüme efekti */
+}
+
+
+
+
+  
