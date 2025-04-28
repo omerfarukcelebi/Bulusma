@@ -675,6 +675,111 @@ header .right a:hover{
 }
 
 
+/* Mobil cihazlar için temel ayarlar */
+@media (max-width: 576px) {
+  html {
+    font-size: 14px;
+  }
+  
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
 
+  .container, .content, .section {
+    padding: 10px;
+  }
+
+  .flex, .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    text-align: center;
+  }
+}
+
+/* Küçük tabletler için */
+@media (min-width: 577px) and (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container, .content, .section {
+    padding: 15px;
+  }
+
+  .flex, .row {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tabletler ve küçük laptoplar için */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    font-size: 16px;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container, .content, .section {
+    padding: 20px;
+  }
+
+  .flex, .row {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Büyük ekranlar için (normal PC'ler ve üstü) */
+@media (min-width: 1025px) {
+  html {
+    font-size: 18px;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container, .content, .section {
+    padding: 30px;
+    max-width: 1200px;
+  }
+
+  .flex, .row {
+    flex-wrap: nowrap;
+    gap: 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 
   
